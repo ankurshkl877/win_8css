@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<head>
+<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
+<script src="C:\Users\ankurshukla\Desktop\web\jquery-1.10.2.js"></script>
+<style>
+
+.robot {
+  position: relative;
+  left: 500px;
+}
+
+.beep {
+  width: 5px;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 10px solid #777;
+  border-bottom: 80px solid #888;
+  position: relative;
+  left: 140px;
+}
+
+@keyframes blink {
+  50% {
+    background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+  }
+}
+@-moz-keyframes blink {
+  50% {
+    background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+  }
+}
+.laser {
+  animation: blink .5s infinite;
+  -webkit-animation: blink .5s infinite;
+  -moz-animation: blink .5s infinite;
+}
+.brain {
+	animation: blink .5s infinite;
+  -webkit-animation: blink .5s infinite;
+  -moz-animation: blink .5s infinite;
+  background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5; 
+  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background-size: 75px 150px;
+  height: 150px;
+  width: 150px;
+  border-radius: 60px 60px 10px 10px;
+  border-bottom: 40px solid #666;
+  position: relative;
+  left: 70px;
+}
+.torso {
+  height: 0;
+  width: 140px;
+  border-top: 300px solid #bc6;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-radius: 20px 20px 100px 100px;
+}
+.left {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: rotate(200deg);
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  position: relative;
+  top: -320px;
+  left: -190px;
+  z-index: -1;
+}
+.right {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  top: -620px;
+  left: 190px;
+  z-index: -1;
+}
+.foot {
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  border: 15px solid #999;
+  position: relative;
+  left: 110px;
+  top: -10px;
+  z-index: -1;
+}
+
+img {
+   border-radius: 110px;  
+}
+
+@keyframes dance {
+  from {
+    left: 800px;
+  }
+}
+@-webkit-keyframes dance {
+  from {
+    left: 800px;
+  }
+}
+@-moz-keyframes dance {
+  from {
+    left: 800px;
+  }
+}
+.right2{
+	font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: rotate(50deg);
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  position: relative;
+  top: -1420px;
+  left: 200px;
+  z-index: -1;
+}
+.left2{
+	font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  	font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(-1) rotate(50deg);
+  -webkit-transform: scaleX(-1) rotate(30deg);
+  -moz-transform: scaleX(-1) rotate(30deg);
+  position: relative;
+  top: -1120px;
+  left: -210px;
+  z-index: -1;
+	
+}
+body{
+	background: ;
+}
+.flink{height: 120px;
+	width: 120px;
+	background: rgba(50,20,255,0.5);
+	border-radius: 120px;
+	position: relative;
+	top: -610px;
+	left: -160px;
+	
+}
+.tlink{height: 120px;
+	width: 120px;
+	background: rgba(60,255,150,1);
+	border-radius: 120px;
+	border: 2px solid rgba(0,255,60,1);
+	position: relative;
+	top: -985px;
+	left: 320px;
+}
+.rlink{
+	height: 120px;
+	width: 120px;
+	background: rgba(60,255,150,1);
+	border-radius: 120px;
+	border: 2px solid rgba(0,255,60,1);
+	position: relative;
+	top: -445px;
+	left: -130px;
+}
+.nlink{
+	height: 120px;
+	width: 120px;
+	background: rgba(255,255,255,1);
+	border-radius: 120px;
+	border: 10px dashed rgba(50,90,255,0.9);
+	position: relative;
+	top: -325px;
+	left: 295px;
+}
+.ribbon-green {
+  font: bold 20px The Girl Next Door ;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+
+  position: relative;
+  padding: 7px 0;
+  left: 0px;
+  top: 45px;
+  width: 120px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45); 
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}
+.facebook{
+	 font-family: 'Poller One', verdana, arial, sans-serif;
+     font-weight: bold;
+	 font-size: 120px;
+	 color: white ;
+	 position: relative;
+	 left: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="robot">
+  <div class="beep"></div>
+  <div class="brain"></div>
+  <div class="torso">
+    <div class="left">j</div>
+    <div class="right">j</div>
+	<div class="left2">j</div>
+	<div class="right2">j</div>
+  </div>
+  <div class="foot"></div>
+  <div class="flink"><div class="facebook">f</div></div>
+  <div class="nlink"><img src="C:\Users\ankurshukla\Desktop\web\twitter-bird.jpg" height="110px" width="110px"></div>
+  <div class="rlink"></div>
+  <div class="tlink"><div class="ribbon-green">NEWS FEED</div></div>
+</div>
+
+
+
+
+
+</body>
